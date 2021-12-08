@@ -1,0 +1,47 @@
+% !Mode:: "TeX:UTF-8"
+\documentclass[type=doctor, openany, pifootnote, nocolor]{shuthesis}
+\usepackage{pdfpages}
+\usepackage{shuthesis}
+\usepackage{times}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\floatname{algorithm}{算法}  
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}  
+\renewcommand{\algorithmicensure}{\textbf{输出:}} 
+
+\graphicspath{{figures/}}
+
+\usepackage{listings}
+\renewcommand{\lstlistingname}{代码}
+\newfontfamily\courier{Courier New}
+\lstset{linewidth=1.1\textwidth,
+        numbers=left, %设置行号位置 
+        basicstyle=\small\courier,
+        numberstyle=\tiny\courier, %设置行号大小  
+        keywordstyle=\color{blue}\courier, %设置关键字颜色  
+        %identifierstyle=\bf，
+        commentstyle=\it\color[cmyk]{1,0,1,0}\courier, %设置注释颜色 
+        stringstyle=\it\color[RGB]{128,0,0}\courier,
+        %framexleftmargin=10mm,
+        frame=single, %设置边框格式  
+        backgroundcolor=\color[RGB]{245,245,244},
+        %escapeinside=``, %逃逸字符(1左面的键)，用于显示中文  
+        breaklines, %自动折行  
+        extendedchars=false, %解决代码跨页时，章节标题，页眉等汉字不显示的问题  
+        xleftmargin=2em,xrightmargin=2em, aboveskip=1em, %设置边距  
+        tabsize=4, %设置tab空格数  
+        showspaces=false %不显示空格  
+        basicstyle=\small\courier
+}  
+
+
+\begin{document}
+
+\include{data/cover}
+
+\mainmatter
+\include{data/text}
+
+\end{document}
