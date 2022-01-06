@@ -3,5 +3,6 @@
 *.blg
 *.log
 *.out
-*.pdf
 *.gz
+main.pdf
+shuthesis.pdf
